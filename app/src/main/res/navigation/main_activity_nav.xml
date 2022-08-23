@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.salihakca2.znoteapproomile.ui.fragment.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/kisiDetayTransition"
+            app:destination="@id/noteDetailFragment" />
+        <action
+            android:id="@+id/noteRecordTransition"
+            app:destination="@id/noteRecordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteDetailFragment"
+        android:name="com.salihakca2.znoteapproomile.ui.fragment.NoteDetailFragment"
+        android:label="NoteDetailFragment" >
+        <argument
+            android:name="note"
+            app:argType="com.salihakca2.znoteapproomile.data.entity.Note" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteRecordFragment"
+        android:name="com.salihakca2.znoteapproomile.ui.fragment.NoteRecordFragment"
+        android:label="NoteRecordFragment" />
+</navigation>
